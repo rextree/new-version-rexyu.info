@@ -1,0 +1,166 @@
+$default-font-family: 'Open Sans',
+sans-serif;
+$default-font-size: 20px;
+$default-h1-size: 200%;
+$default-h2-size: 160%;
+$default-h3-size: 140%;
+$codestyle-font-family: 'Source Code Pro',
+monospace;
+$codestyle-font-size: 14px;
+$codestyle-tag-color: #63a1c2;
+$codestyle-attr-color: #ffff99;
+$codestyle-link-color: #94c7b5;
+$codestyel-comment-color: #373838;
+html,
+body,
+section,
+div,
+h1,
+h2,
+h3,
+p,
+nav,
+ul,
+li {
+	font: $default-font-size $default-font-family;
+	margin: 0;
+	padding: 0;
+}
+
+h1 {
+	font-size: $default-h1-size;
+}
+
+h2 {
+	font-size: $default-h2-size;
+}
+
+h3 {
+	font-size: $default-h3-size;
+}
+
+.shadowCanvas {
+	background: -webkit-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	z-index: 999;
+	.greeting{
+		position: relative;
+		top: 30%;
+		h1{
+		color: #fff;
+		text-align: center;
+		margin-bottom: 20px;
+	}p{
+		color: #fff;
+		text-align: center;
+		margin: 20px 0;
+	}
+	}
+	.btn {
+		cursor: pointer;
+		background: #fff ;
+		color: #000;
+		font-weight: 300;
+		padding: 5px 10px;
+		display: inline-block;
+		border: 2px solid #000;
+		transition: all 0.5s;
+	}
+	.btn:hover{
+		background: #000;
+		color: #fff;
+		border: 2px solid #fff;
+	}
+	.left-selection {
+		position: absolute;
+		top: 50%;
+		left: 25%;
+		transform: translate(-50%, -50%);
+	}
+	.right-selection{
+		position: absolute;
+		top: 50%;
+		left: 75%;
+		transform: translate(-50%, -50%);
+	}
+}
+
+.codeStyle {
+	position: relative;
+	z-index: 1;
+	background: #1e1e1e;
+	width: 50%;
+	float: left;
+	.rowNum {
+		font: $codestyle-font-size $codestyle-font-family;
+		color: $codestyel-comment-color;
+		line-height: 150%;
+		float: left;
+		text-align: center;
+		width: 3.5%;
+	}
+	.code {
+		float: left;
+		margin-top: 10px;
+		width: 90%;
+		.row {
+			font: $codestyle-font-size $codestyle-font-family;
+			line-height: 150%;
+			.row1 {
+				background: #000000;
+				color: #fff;
+			}
+			.tag {
+				color: $codestyle-tag-color;
+			}
+			.attr {
+				color: $codestyle-attr-color;
+			}
+			.link {
+				color: $codestyle-link-color;
+			}
+			.value {
+				color: #fff;
+			}
+			.tab1 {
+				margin-left: 40px;
+			}
+			.tab2 {
+				margin-left: 80px;
+			}
+			.comment {
+				color: $codestyel-comment-color;
+			}
+			.hyperlink {
+				color: #fff;
+				text-decoration: none;
+			}
+			.hyperlink:hover {
+				cursor: pointer;
+			}
+		}
+	}
+}
+
+.codeStyle:after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+.webStyle{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	.container{
+		
+		.btn{
+			padding: 5px 10px;
+			border: 2px solid #000;
+			display: inline-block;
+			cursor: pointer;
+		}
+	}
+}
