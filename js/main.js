@@ -31,6 +31,14 @@ function webStyle(){
 		"display": "none"
 	});
 }
+function codeStyleWeb(){
+	$('.codeStyle').css({
+		"display": "block",
+		"width": "100%", 
+		"transition": "all 1s"
+	});
+	$('.webStyle').css({"width": "0%", "transition": "all 1s"});
+}
 
 var keys = {37: 1, 38: 1, 39: 1, 40: 1};
 
