@@ -26,10 +26,16 @@ function codeStyle(){
 function webStyle(){
 	enableScroll();
 	$('.shadowCanvas').remove();
-	$('.webStyle').css({"width": "100%", "transition": "all 1s"});
 	$('.codeStyle').css({
-		"display": "none"
+		"overflow":"hidden",
+		"width": "0",
+		"transition": "all 1s"
 	});
+	$('.rowNum').css({
+		"overflow": "hidden"
+	});
+	$('.webStyle').css({"width": "100%", "transition": "all 1s"});
+	
 }
 function codeStyleWeb(){
 	$('.codeStyle').css({
@@ -39,6 +45,17 @@ function codeStyleWeb(){
 	});
 	$('.webStyle').css({"width": "0%", "transition": "all 1s"});
 }
+function webStyleCode(){
+	$('.webStyle').css({
+		"display": "flex",
+		"width": "100%", 
+		"transition": "all 1s"
+	});
+	$('.codeStyle').css({"overflow":"hidden",
+		"width": "0",
+		"transition": "all 1s"});
+}
+
 
 var keys = {37: 1, 38: 1, 39: 1, 40: 1};
 

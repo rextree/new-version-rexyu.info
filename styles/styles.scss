@@ -47,7 +47,7 @@ h3 {
 	z-index: 999;
 	.greeting{
 		position: relative;
-		top: 30%;
+		top: 28%;
 		h1{
 		color: #fff;
 		text-align: center;
@@ -91,7 +91,7 @@ h3 {
 	position: relative;
 	z-index: 1;
 	background: #1e1e1e;
-	width: 50%;
+	width: 50vw;
 	float: left;
 	.rowNum {
 		font: $codestyle-font-size $codestyle-font-family;
@@ -100,11 +100,12 @@ h3 {
 		float: left;
 		text-align: center;
 		width: 3.5%;
+		margin-top: 10px;
 	}
 	.code {
 		float: left;
 		margin-top: 10px;
-		width: 90%;
+		width: 96.5%;
 		.row {
 			font: $codestyle-font-size $codestyle-font-family;
 			line-height: 150%;
@@ -151,6 +152,8 @@ h3 {
 }
 
 .webStyle{
+	float: left;
+	width: 50vw;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -164,3 +167,4 @@ h3 {
 		}
 	}
 }
+	
