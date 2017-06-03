@@ -17,32 +17,36 @@
 	.container {
 		display: flex;
 		flex-direction: row;
-/*		flex-wrap: wrap;*/
+		align-items: baseline;
+		height: 500px;
 	}
 	
 	.flex1 {
-		width: 300px;
+		flex-basis: 200px;
 		background: yellow;
 		order: 2;
 	}
 	
 	.flex2 {
-		width: 300px;
+		flex-basis: 200px;
 		background: red;
 		order: 1;
-		flex-grow: 2
 	}
 	
 	.flex3 {
-		width: 300px;
+		flex-basis: 200px;
 		background: blue;
 		order: 3;
-	}.flex4 {
-		width: 300px;
+	}
+	
+	.flex4 {
+		flex-basis: 200px;
 		background: green;
 		order: 5;
-	}.flex5 {
-		width: 300px;
+	}
+	
+	.flex5 {
+		flex-basis: 200px;
 		background: orange;
 		order: 3;
 	}

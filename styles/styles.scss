@@ -1,6 +1,6 @@
 $default-font-family: 'Open Sans',
 sans-serif;
-$default-font-size: 20px;
+$default-font-size: 18px;
 $default-h1-size: 200%;
 $default-h2-size: 160%;
 $default-h3-size: 140%;
@@ -25,6 +25,7 @@ li {
 	font: $default-font-size $default-font-family;
 	margin: 0;
 	padding: 0;
+	line-height: 150%;
 }
 
 h1 {
@@ -45,22 +46,23 @@ h3 {
 	width: 100vw;
 	height: 100vh;
 	z-index: 999;
-	.greeting{
+	.greeting {
 		position: relative;
 		top: 28%;
-		h1{
-		color: #fff;
-		text-align: center;
-		margin-bottom: 20px;
-	}p{
-		color: #fff;
-		text-align: center;
-		margin: 20px 0;
-	}
+		h1 {
+			color: #fff;
+			text-align: center;
+			margin-bottom: 20px;
+		}
+		p {
+			color: #fff;
+			text-align: center;
+			margin: 20px 0;
+		}
 	}
 	.btn {
 		cursor: pointer;
-		background: #fff ;
+		background: #fff;
 		color: #000;
 		font-weight: 300;
 		padding: 5px 10px;
@@ -68,7 +70,7 @@ h3 {
 		border: 2px solid #000;
 		transition: all 0.5s;
 	}
-	.btn:hover{
+	.btn:hover {
 		background: #000;
 		color: #fff;
 		border: 2px solid #fff;
@@ -79,7 +81,7 @@ h3 {
 		left: 25%;
 		transform: translate(-50%, -50%);
 	}
-	.right-selection{
+	.right-selection {
 		position: absolute;
 		top: 50%;
 		left: 75%;
@@ -151,37 +153,131 @@ h3 {
 	display: table;
 }
 
-.webStyle{
+.webStyle {
 	float: left;
 	width: 50vw;
-	height: 100vh;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	.container{
-		h2{
-			padding: 0px 10px;
-			margin: 20px 0px;
+	.container {
+		margin: 0 auto;
+		display: flex;
+		max-width: 980px;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		header {
+			margin: 20px 3% 0px 3%;
+			flex-basis: 100%;
+			text-align: right;
+			.btn {
+				margin-right: 5px;
+				font-size: 80%;
+				padding: 5px 10px;
+				border: 2px solid #000;
+				box-shadow: 5px -5px #000;
+				display: inline-block;
+				cursor: pointer;
+				transition: all 0.5s;
+			}
+			.btn-indictor{
+				font-size: 80%;
+				display: inline-block;
+				margin-right: 20px;
+				animation-name: indictor;
+    			animation-duration: 0.7s;
+    			animation-iteration-count: infinite;
+			}
+			.btn:hover{
+				color: #fff;
+				background: #000;
+				border: 2px solid #fff;
+			}
+		}
+		nav {
 			border: 2px solid #000;
 			box-shadow: -10px -10px 0px 0px #000;
+			position: fixed;
+			top: 30%;
+			left: 20px;
+			ul {
+				display: flex;
+				flex-direction: column;
+				list-style-type: none;
+				li {
+					margin: 5px 0;
+					a {
+						display: block;
+						padding: 7px;
+						text-decoration: none;
+						color: #000;
+					}
+					.active {
+						background: #000;
+						color: #fff;
+					}
+				}
+				li:first-child {
+					margin-top: 0px;
+				}
+				li:last-child {
+					margin-bottom: 0px;
+				}
+			}
 		}
-		.profilePic{
-			box-shadow: -10px -10px 0px 0px #000;
-			width: 200px;
-			height: auto;
-		}
-		p{
-			padding: 0px 10px;
-			margin: 20px 0px;
+		.introduction {
+			margin: 20px 1.5% 0px 3%;
+			flex-basis: 60%;
 			border: 2px solid #000;
 			box-shadow: -10px -10px 0px 0px #000;
+			h1 {
+				text-transform: uppercase;
+				padding: 0px 10px;
+				.fa {
+					margin-left: 10px;
+				}
+			}
+			p{
+				padding: 10px;
+				line-height: 160%;
+			}
+			.btn-cv{
+				display: inline-block;
+				margin: 15px 10px;
+				padding: 10px;
+				background: #CF000F;
+				color: #fff;
+				text-decoration: none;
+				text-transform: uppercase;
+				box-shadow: 5px -5px #96281B;
+				transition: all 0.5s;
+			}
+			.btn-cv:hover{
+				transform: translate(5px, -5px);
+				box-shadow: 0px 0px #96281B;
+			}
 		}
-		.btn{
-			padding: 5px 10px;
-			border: 2px solid #000;
-			display: inline-block;
-			cursor: pointer;
+		.profilePic {
+			margin: 20px 3% 0px 1.5%;
+			flex-basis: 30%;
+			align-self: flex-end;
+			img {
+				width: 100%;
+				height: auto;
+				box-shadow: -10px -10px 0px 0px #000;
+			}
+		}
+		.skills{
+			margin: 20px 3% 0px 3%;
 		}
 	}
 }
+
+@keyframes indictor{
+	0%{
+		margin-right: 20px;
+	}
+	50%{
+		margin-right: 30px;
+	}
+	100%{
+		margin-right: 20px;
+	}
 	
+}
